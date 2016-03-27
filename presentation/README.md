@@ -2,7 +2,7 @@
 
 The *mtheme* is a Beamer theme with minimal visual. The core design principles
 of the theme were described in a [blog post](http://bloerg.net/2014/09/20/a-modern-beamer-theme.html).
-Not convinced?  Have a look at the [demo slides](demo.pdf).
+Not convinced?  Have a look at the [demo slides](http://mirrors.nic.cz/tex-archive/macros/latex/contrib/beamer-contrib/themes/metropolis/demo/demo.pdf).
 
 
 ![Sample](http://i.imgur.com/wP4uGbS.png)
