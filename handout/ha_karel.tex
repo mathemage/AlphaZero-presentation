@@ -151,10 +151,9 @@ a~player's score is the number of player's stones on the board, plus the number 
   \item [Policy network] is a~CNN selecting moves.
     It addresses the problem of the game-tree breadth.
     The output is a~probability distribution over all legal moves.
-    % TODO Add labels of policy networks
     \begin{description}
-      \item [SL policy network] is trained by supervised learning from expert human moves.
-      \item [RL policy network] is trained by reinforcement learning, namely by optimizing self-play.
+      \item [SL policy network] $p_\sigma$ is trained by supervised learning from expert human moves.
+      \item [RL policy network] $p_\rho$ is trained by reinforcement learning, namely by optimizing the~self-play.
     \end{description}
 
     % TODO The output probability predicts the winner of~games played by the RL policy network against itself.
