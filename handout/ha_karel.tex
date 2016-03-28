@@ -120,7 +120,7 @@ Using this search algorithm, the program AlphaGo achieved a~99.8~\% winning rate
 
 \section{Rules of Go}
 \emph{Black} and \emph{White} place pieces (\emph{stones}) on the unoccupied intersections (\emph{points}) of a~\emph{board} with a~$19\times19$ grid of~lines.
-They take turns, Black starts the game.
+They take turns, Black moves first.
 \begin{description}
   \item [The rule of liberty]
     Every stone remaining on the board must have at least one open point (an~intersection, called a~\emph{liberty}) directly next to it (up, down, left, or right), or must be part of a~connected group that has at least one such liberty next to it.
@@ -128,7 +128,8 @@ They take turns, Black starts the game.
     Stones or groups of stones which lose their last liberty are removed from the board.
 
   \item [The ``ko'' rule]
-    \todo
+    The stones on the board must never repeat a~previous position of~stones.
+    This is to prevent unending cycles.
 \end{description}
 
 \section{AlphaGo}
