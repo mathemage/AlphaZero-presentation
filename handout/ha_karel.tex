@@ -148,18 +148,21 @@ a~player's score is the number of player's stones on the board, plus the number 
 \end{figure}
 
 \begin{description}
-  \item [Rollout policy] is a~\todo.
+  \item [Rollout policy] $p_\pi$ is a~CNN rapidly sampling actions during a~\emph{rollout} (a~fast-forward simulation from a~position to the end of~the game).
+    It predicts expert human moves faster but less accurately than $p_\sigma$ (see below).
+    %The output is a~probability distribution over all moves.
+
   \item [Policy network] is a~CNN selecting moves.
     It addresses the problem of the game-tree breadth.
-    The output is a~probability distribution over all legal moves.
+    %Again, the output is a~probability distribution over all moves.
     \begin{description}
-      \item [SL policy network] $p_\sigma$ is trained by supervised learning from expert human moves.
-      \item [RL policy network] $p_\rho$ is trained by reinforcement learning, namely by optimizing the~self-play.
+      \item [SL policy network] $p_\sigma$ is trained by \underline{s}upervised \underline{l}earning to predict expert human moves.
+        \item [RL policy network] $p_\rho$ is trained by \underline{r}einforcement \underline{l}earning to win in the~games of~self-play.
     \end{description}
 
-    % TODO The output probability predicts the winner of~games played by the RL policy network against itself.
-  \item [Value network] $v_\theta$ is a~CNN evaluating board positions.
-    It addresses the problem of the game-tree depth.
+  \item [Value network] $v_\theta$ is a~CNN evaluating board positions to address the problem of the game-tree depth.
+    It is trained by regression to predict the outcome in~positions of~the self-play games.
+    %The output probability predicts the winner of~games played by the RL policy network against itself.
 \end{description}
 
 \begin{theorem}
