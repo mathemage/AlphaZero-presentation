@@ -88,19 +88,11 @@
 
 \section{Introduction}
 The game of Go has long been viewed as the most challenging of classic games for artificial intelligence owing to its enormous search space and the difficulty of evaluating board positions and moves.
-A~new approach to computer Go introduces:
-\begin{description}
-  \item [value networks] to evaluate board positions
-  \item [policy networks] to select moves.
-\end{description}
+A~new approach to computer Go introduces \emph{value networks} to evaluate board positions and \emph{policy networks} to select moves.
 These deep neural networks are trained by a novel combination of supervised learning from human expert games, and reinforcement learning from games of self-play.
-Without any lookahead search, the neural networks play Go at the level of state-of-the-art Monte Carlo tree search programs that simulate thousands of random games of self-play.
 
 Furthermore, a~new search algorithm is introduced: it combines Monte Carlo simulation with value and policy networks.
-Using this search algorithm, the program AlphaGo achieved a 99.8 \% winning rate against other Go programs, and defeated the human European Go champion by 5~games to 0.
-This is the first time that a computer program has defeated a human professional player in the full-sized game of Go, a feat previously thought to be at least a decade away.
-
-TODO Soon afterwards, there was a~match between the World champion...
+Using this search algorithm, the program AlphaGo achieved a~99.8~\% winning rate against other Go programs.
 
 \section{Supervised learning}
 \begin{description}
@@ -114,12 +106,12 @@ TODO Soon afterwards, there was a~match between the World champion...
   \item [Self-play] is \todo.
 \end{description}
 
-\section{Game-Tree Search}
+\section{Game-tree search}
 \begin{description}
   \item [Monte Carlo tree search] (MCTS) is \todo.
 \end{description}
 
-\section{Neural nets}
+\section{Neural networks}
 \begin{description}
   \item [Neural network] is \todo.
   \item [Convolutional neural network] (CNN) is \todo.
