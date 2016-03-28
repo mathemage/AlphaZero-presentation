@@ -65,7 +65,7 @@
 \def\cite#1{Don't use cite.}
 %%%%%% The document itself %%%%%%
 
-\newcommand{\todo}{\alert{TODO}}
+\newcommand{\todo}{\textbf{TODO}}
 
 \speaker{Karel Ha}{mathemage@gmail.com}
 \author{David Silver, Demis Hassabis et al.}% If you present a paper. If not you may skip this
@@ -122,8 +122,13 @@ Using this search algorithm, the program AlphaGo achieved a~99.8~\% winning rate
 \emph{Black} and \emph{White} place pieces (\emph{stones}) on the unoccupied intersections (\emph{points}) of a~\emph{board} with a~$19\times19$ grid of~lines.
 They take turns, Black starts the game.
 \begin{description}
-  \item [the rule of liberty] \todo
-  \item [the ``ko'' rule] \todo
+  \item [The rule of liberty]
+    Every stone remaining on the board must have at least one open point (an~intersection, called a~\emph{liberty}) directly next to it (up, down, left, or right), or must be part of a~connected group that has at least one such liberty next to it.
+
+    Stones or groups of stones which lose their last liberty are removed from the board.
+
+  \item [The ``ko'' rule]
+    \todo
 \end{description}
 
 \section{AlphaGo}
