@@ -40,6 +40,9 @@
 \usepackage{a4wide} % wider page
 \usepackage{hyperref}
 
+\usepackage{graphicx}
+\usepackage{float}
+
 \begin{document}
 
 %%%%% Some Macros - leave them as they are  %%%%%
@@ -137,6 +140,13 @@ In the match against Lee Sedol, the \emph{area scoring} was used:
 a~player's score is the number of player's stones on the board, plus the number of~empty intersections surrounded by that player's stones.
 
 \section{AlphaGo}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.7\textwidth]{../img/neural_nets_pipeline.png}
+  \caption{Training of neural networks: pipeline and architecture}
+  \label{fig:neural_nets_pipeline}
+\end{figure}
+
 \begin{description}
   \item [Policy network] is a~CNN selecting moves.
     It addresses the problem of the game-tree breadth.
