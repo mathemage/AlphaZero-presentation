@@ -82,37 +82,32 @@
 \source{a~copy available at \url{http://kam.mff.cuni.cz/~spring/2016/papers/go.pdf}}
 \endtitle
 
-\hyphenation{
-  pa-ra-me-ter
-  pa-ra-me-ters
-}
-
 \section{Introduction}
 The game of Go has long been viewed as the most challenging of classic games for artificial intelligence owing to its enormous search space and the difficulty of evaluating board positions and moves.
 A~new approach to computer Go introduces \emph{value networks} to evaluate board positions and \emph{policy networks} to select moves.
 These deep neural networks are trained by a novel combination of supervised learning from human expert games, and reinforcement learning from games of self-play.
 
 Furthermore, a~new search algorithm is introduced: it combines Monte Carlo simulation with value and policy networks.
-Using this search algorithm, the program AlphaGo achieved a~99.8~\% winning rate against other Go programs.
+Using this search algorithm, the computer program AlphaGo developed by~Google DeepMind achieved a~99.8~\% winning rate against other Go programs.
 
 \section{Supervised learning}
 A~(machine learning) program is ``trained'' on a~pre-defined dataset.
-Based off its training data, the program can make accurate decisions when given new data.
+Based on its training data, the program can make accurate decisions when given new data.
 \begin{description}
   \item [Training] is the phase, when the model ``learns'', i.e. it optimizes the~error function by adjusting inner parameters.
-    The portion of~data set used for~training is called the~\emph{training set}.
+    The portion of~the dataset used for~training is called the~\emph{training set}.
   \item [Testing] is the phase evaluating, how well the model can make predictions about unseen data.
-    The portion of~data set used for~testing is called the~\emph{testing set}.
+    The portion of~the dataset used for~testing is called the~\emph{testing set}.
   \item [Classification] is is the process of taking some sort of input and assigning a label to it.
     Classification systems are often used when predictions are of a~discrete nature, e.g. ``yes or no'', ``spam or regular email'', ``winning or losing position'' etc.
   \item [Regression] is used when the predicted value falls on a~continuous spectrum.
     It is a~``continuous counterpart'' of classification, used to answer questions of ``How much? How many?'' nature.
-  \item [Gradient descent] (GD) is an~iterative optimization algorithm to find a~(generally local) minimum of~a~cost or an~error function.
+  \item [Gradient descent] (GD) is an~iterative optimization algorithm to find a~(generally local) minimum of~an~error function.
     It moves from the current point to a~new one, by taking steps proportional to~the negative of~the gradient (or the~approximate gradient).
-  \item [Stochastic gradient descent] (SGD) is a~variant of~GD, which uses only one sample of~the training set per~iteration to~update the parameters.
-    Rather than using the~overall error of~the~training set, it works with an~error of~a~single sample.
+  \item [Stochastic gradient descent] (SGD) is a~variant of~GD, which updates the parameters in~each iteration by using only one sample of~the training set.
+    Hence, instead of~using the~overall error of~the~training set as in~the classic GD, the SGD works with an~error of~a~single sample.
   \item [Overfitting] is a~situation where the model learns the training data by~heart, instead of~learning the big picture.
-    This happens when the model is too complex for~the size of~the training data, e.g. using a~$100$-degree polynomial as a~model to fit 100 data points.
+    This happens when the model is too complex for~the size of~the training data, e.g. when using a~$100$-degree polynomial as a~model to fit 100 data points.
 
     Overfitting prevents the model from generalizing to~new data.
 \end{description}
@@ -122,14 +117,14 @@ Reinforcement learning allows machines and software agents to~automatically dete
 This automated learning scheme implies that there is little need for a~human expert in~the domain of~application.
 
 \begin{description}
-  \item [Self-play] means learning from game instances played by~the agent against itself (or in~the case of~AlphaGo, against its previous versions).
+  \item [Self-play] means learning from game matches played by~the agent against itself (or in~the case of~AlphaGo, against its previous versions).
     Self-play is especially useful when the~evaluation function of~the~game is unknown in advance.
 \end{description}
 
 \section{Game-tree search}
 \begin{description}
   \item [Monte Carlo tree search] (MCTS) is a~Monte Carlo heuristic of~the classical tree search.
-    Instead of traversing the entire game tree, however, the MCTS selects the~most promising moves, expanding the search tree based on~random sampling.
+    However, instead of traversing the entire game tree, the MCTS selects the~most promising moves, expanding the search tree based on~random sampling.
 
     In~each iteration, the game is played-out to~the very end by~choosing moves at~random.
     The final outcome of~each playout is then used to~weight the nodes in~the game tree accordingly.
@@ -137,9 +132,9 @@ This automated learning scheme implies that there is little need for a~human exp
 \end{description}
 
 \section{Neural networks}
-Inspired by biological neural networks, artificial neural networks (ANN) are a network of interconnected nodes that make up a model.
-They can be defined as statistical learning models that are used to approximate functions that depend on a large number of inputs.
-Neural networks are usually used when the volume of inputs is far too large for standard machine learning approaches.
+Inspired by biological neural networks, an~artificial neural network (ANN) is a~network of~interconnected nodes that make up a~model.
+ANNs can be defined as~statistical learning models that are used to approximate functions which depend on a~large number of~inputs.
+Neural networks are typically used when the volume of~inputs is far too large for~standard machine learning approaches.
 
 \begin{figure}[H]
   \centering
@@ -149,17 +144,18 @@ Neural networks are usually used when the volume of inputs is far too large for 
 \end{figure}
 
 \begin{description}
-  \item [Convolutional neural network] (CNN) is a~neural network suitable for high-dimensional inputs (e.g. many pixels in an~image).
-    CNNs are typically used in~computer vision (identifying objects in an~image, face detection in~photos etc.).
+  \item [Convolutional neural network] (CNN) is a~neural network suitable for high-dimensional inputs (e.g. a~large number of~pixels in an~image).
+    CNNs are frequently used in~computer vision (for identifying objects in an~image, for face detection in~photos etc.).
 
     They are invariant to expectable transformations of~input, such as translations of~objects in~a~picture or changes in~illumination.
   \item [Deep neural network] (DNN) is a~neural network with many hidden layers.
-    It can model complex non-linear relationships, e.g. in~speech, images, videos or board positions of~Go.
+    It can model complex non-linear relationships, e.g. in~speech, in~images, in~videos or in~board positions of~Go.
 \end{description}
 
 \section{Rules of Go}
 \emph{Black} and \emph{White} place pieces (\emph{stones}) on the unoccupied intersections (\emph{points}) of a~\emph{board} with a~$19\times19$ grid of~lines.
-They take turns, Black moves first.
+Players take turns, Black moves first.
+There are only 2 basic rules of Go:
 \begin{description}
   \item [The rule of liberty]
     Every stone remaining on the board must have at least one open point (an~intersection, called a~\emph{liberty}) directly next to it (up, down, left, or right), or must be part of a~connected group that has at least one such liberty next to it.
@@ -179,31 +175,29 @@ a~player's score is the number of player's stones on the board, plus the number 
 \begin{figure}[H]
   \centering
   \includegraphics[width=.7\textwidth]{../img/neural_nets_pipeline.png}
-  \caption{Training of neural networks: pipeline and architecture}
+  \caption{Training the neural networks: the pipeline and the architecture}
   \label{fig:neural_nets_pipeline}
 \end{figure}
 
 \begin{description}
   \item [Rollout policy] $p_\pi$ is a~CNN rapidly sampling actions during a~\emph{rollout} (a~fast-forward simulation from a~position to the end of~the game).
-    It predicts expert human moves faster but less accurately than $p_\sigma$ (see below).
+    It predicts expert human moves much faster but less accurately than $p_\sigma$ (see below).
     %The output is a~probability distribution over all moves.
 
   \item [Policy network] is a~CNN selecting moves.
     It addresses the problem of the game-tree breadth.
-    %Again, the output is a~probability distribution over all moves.
     \begin{description}
       \item [SL policy network] $p_\sigma$ is trained by \underline{s}upervised \underline{l}earning to predict expert human moves.
         \item [RL policy network] $p_\rho$ is trained by \underline{r}einforcement \underline{l}earning to win in the~games of~self-play.
     \end{description}
 
-  \item [Value network] $v_\theta$ is a~CNN evaluating board positions to address the problem of the game-tree depth.
-    It is trained by regression to predict the outcome in~positions of~the self-play games.
-    %The output probability predicts the winner of~games played by the RL policy network against itself.
+  \item [Value network] $v_\theta$ is a~CNN evaluating board positions, so as to address the problem of the game-tree depth.
+    It is trained by regression to predict the outcome in~positions of~the self-played games.
 \end{description}
 
 AlphaGo combines the~policy and value networks with the~MCTS, thus achieving the~main result of~the article:
 \begin{theorem}
-  The (distributed) AlphaGo plays the~game of~Go at~the super-human level.
+  The (distributed version of) AlphaGo plays Go at~the super-human level.
 \end{theorem}
 
 \begin{proof}
