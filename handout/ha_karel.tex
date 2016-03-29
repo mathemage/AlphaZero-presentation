@@ -101,15 +101,17 @@ Using this search algorithm, the program AlphaGo achieved a~99.8~\% winning rate
 A~(machine learning) program is ``trained'' on a~pre-defined dataset.
 Based off its training data, the program can make accurate decisions when given new data.
 \begin{description}
-  \item [Training] is the phase, when the model ``learns'' by optimizing through its inner parameters.
+  \item [Training] is the phase, when the model ``learns'', i.e. it optimizes the~error function by adjusting inner parameters.
+    The portion of~data set used for~training is called the~\emph{training set}.
   \item [Testing] is the phase evaluating, how well the model can make predictions about unseen data.
+    The portion of~data set used for~testing is called the~\emph{testing set}.
   \item [Classification] is is the process of taking some sort of input and assigning a label to it.
     Classification systems are often used when predictions are of a~discrete nature, e.g. ``yes or no'', ``spam or regular email'', ``winning or losing position'' etc.
   \item [Regression] is used when the predicted value falls on a~continuous spectrum.
     It is a~``continuous counterpart'' of classification, used to answer questions of ``How much? How many?'' nature.
-  \item [Gradient descent] is an~iterative optimization algorithm to find a~(generally local) minimum of~a~cost function.
+  \item [Gradient descent] (GD) is an~iterative optimization algorithm to find a~(generally local) minimum of~a~cost or an~error function.
     It moves from the current point to a~new one, by taking steps proportional to~the negative of~the gradient (or the~approximate gradient).
-  \item [Stochastic gradient descent] is \todo.
+  \item [Stochastic gradient descent] (SGD) is \todo.
   \item [Overfitting] is a~situation where the model learns the training data by~heart, instead of~learning the big picture.
     This happens when the model is too complex for~the size of~the training data, e.g. using a~$100$-degree polynomial as a~model to fit 100 data points.
 
