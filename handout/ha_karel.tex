@@ -130,7 +130,12 @@ This automated learning scheme implies that there is little need for a~human exp
 
 \section{Game-tree search}
 \begin{description}
-  \item [Monte Carlo tree search] (MCTS) is \todo.
+  \item [Monte Carlo tree search] (MCTS) is a~Monte Carlo heuristic of~the classical tree search.
+    Instead of traversing the entire game tree, however, the MCTS selects the~most promising moves, expanding the search tree based on~random sampling.
+
+    In~each iteration, the game is played-out to~the very end by~choosing moves at~random.
+    The final outcome of~each playout is then used to~weight the nodes in~the game tree accordingly.
+    Thus, better nodes are more likely to be chosen in future playouts.
 \end{description}
 
 \section{Neural networks}
