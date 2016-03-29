@@ -135,7 +135,10 @@ Neural networks are usually used when the volume of inputs is far too large for 
 \end{figure}
 
 \begin{description}
-  \item [Convolutional neural network] (CNN) is a~type of~neural network \todo.
+  \item [Convolutional neural network] (CNN) is a~neural network suitable for high-dimensional inputs (e.g. many pixels in an~image).
+    CNNs are typically used in~computer vision (identifying objects in an~image, face detection in~photos etc.).
+
+    They are invariant to expectable transformations of~input, such as translations of~objects in a~picture or changes in~illumination.
   \item [Deep neural network] (DNN) is a~neural network with many hidden layers.
     It can model complex non-linear relationships, e.g. in~speech, images, videos or board positions of~Go.
 \end{description}
@@ -184,8 +187,9 @@ a~player's score is the number of player's stones on the board, plus the number 
     %The output probability predicts the winner of~games played by the RL policy network against itself.
 \end{description}
 
+The main result of~the article is the following theorem:
 \begin{theorem}
-  The (distributed) AlphaGo program has reached the super-human level of~expertise in~the game of~Go.
+  The (distributed) AlphaGo program has reached the \underline{super-human} level of~expertise in~the game of~Go.
 \end{theorem}
 
 \begin{proof}
