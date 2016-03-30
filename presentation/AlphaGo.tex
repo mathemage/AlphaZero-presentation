@@ -1,6 +1,10 @@
 \documentclass{beamer}
 \usetheme{metropolis}           % Use metropolis theme
 
+%%% Bibliography
+\usepackage[backend=bibtex, style=authoryear]{biblatex}
+\bibliography{bibliography.bib}
+
 \setbeamercolor{title}{fg=white}
 \setbeamercolor{author}{fg=black}
 \setbeamercolor{institute}{fg=white}
@@ -30,7 +34,7 @@
   \end{frame}
 
   {
-    \setbeamertemplate{frame footer}{sources: \todo}
+    \setbeamertemplate{frame footer}{[1] \cite{GatysEB15a} [2] \cite{LiW16}}
     \begin{frame}{Artistic-style painting}
       \begin{center}
         \includegraphics[height=.4\textheight]{../img/art_Van_Gogh.jpg}
@@ -186,5 +190,4 @@
       Questions?
     \end{center}
   \end{frame}
-
 \end{document}

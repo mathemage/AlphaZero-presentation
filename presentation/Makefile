@@ -1,7 +1,9 @@
 all: AlphaGo.pdf
 
 # LaTeX must be run multiple times to get references right
-AlphaGo.pdf: AlphaGo.tex $(wildcard *.tex)
+AlphaGo.pdf: AlphaGo.tex $(wildcard *.tex) bibliography.bib
+	xelatex $<
+	bibtex AlphaGo
 	xelatex $<
 	xelatex $<
 
