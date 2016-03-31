@@ -45,7 +45,7 @@
 
   {
     \setbeamertemplate{frame footer}{\cite{Corrado15}}
-    \begin{frame}{Auto reply feature of~Google Inbox}
+    \begin{frame}{Auto Reply Feature of~Google Inbox}
       \begin{center}
         \includegraphics[height=.85\textheight]{../img/Inbox_auto_reply.png}
       \end{center}
@@ -54,7 +54,7 @@
 
   {
     \setbeamertemplate{frame footer}{[1] \cite{GatysEB15a} [2] \cite{LiW16}}
-    \begin{frame}{Artistic-style painting}
+    \begin{frame}{Artistic-style Painting}
       \begin{center}
         \includegraphics[height=.4\textheight]{../img/art_Van_Gogh.jpg}
         \pause
@@ -78,7 +78,7 @@
 
   \section{Basics of Machine learning}
 
-  \begin{frame}{Supervised versus unsupervised learning}
+  \begin{frame}{Supervised versus Unsupervised Learning}
     Supervised learning
     \begin{itemize}[<+- | alert@+>]
       \item \todo
@@ -93,7 +93,7 @@
     \end{itemize}
   \end{frame}
 
-  \begin{frame}{Supervised learning}
+  \begin{frame}{Supervised Learning}
     Phases:
     \pause
     \begin{enumerate}[<+- | alert@+>]
@@ -115,7 +115,7 @@
 
   {
     \setbeamertemplate{frame footer}{\url{https://www.researchgate.net/post/How_to_Avoid_Overfitting}}
-    \begin{frame}{Underfitting and overfitting}
+    \begin{frame}{Underfitting and Overfitting}
       \begin{center}
         \includegraphics[width=.75\textwidth]{../img/underfitting_and_overfitting.jpg}
         \pause
@@ -125,7 +125,7 @@
     \end{frame}
   }
 
-  \begin{frame}{Reinforcement learning}
+  \begin{frame}{Reinforcement Learning}
     \alert{Self-play}
     \todo
   \end{frame}
@@ -140,15 +140,15 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
   \section{Neural networks}
-  \begin{frame}{Neural network}
+  \begin{frame}{Neural Network}
     \todo
   \end{frame}
 
-  \begin{frame}{Deep neural network}
+  \begin{frame}{Deep Neural Network}
     \todo
   \end{frame}
 
-  \begin{frame}{Convolutional neural network}
+  \begin{frame}{Convolutional Neural Network}
     \todo
   \end{frame}
 
@@ -180,27 +180,27 @@
   \section{AlphaGo: Inside Out}
   {
     \setbeamertemplate{frame footer}{\cite{Silver2016mastering}}
-    \begin{frame}{Training the (deep convolutional) neural networks}
+    \begin{frame}{Training the (Deep Convolutional) Neural Networks}
       \begin{center}
         \includegraphics[width=\textwidth]{../img/neural_nets_pipeline.png}
       \end{center}
     \end{frame}
 
-    \begin{frame}{Policy and value networks}
+    \begin{frame}{Policy and Value Networks}
       \begin{center}
         \includegraphics[height=.85\textheight]{../img/policy_and_value_network.png}
       \end{center}
     \end{frame}
 
-    \begin{frame}{Rollout policy}
+    \begin{frame}{Rollout Policy}
       \todo
     \end{frame}
 
-    \begin{frame}{SL policy networks (1/2)}
+    \begin{frame}{SL Policy Networks (1/2)}
       \todo
     \end{frame}
 
-    \begin{frame}{SL policy networks (2/2)}
+    \begin{frame}{SL Policy Networks (2/2)}
       \begin{center}
         \includegraphics[height=.65\textheight]{../img/eval_SL_policy_network.png}
       \end{center}
@@ -208,15 +208,15 @@
       move probabilities taken directly from the SL policy network $p_\sigma$ (reported as a~percentage if above $0.1\%$).
     \end{frame}
 
-    \begin{frame}{RL policy networks}
+    \begin{frame}{RL Policy Networks}
       \todo
     \end{frame}
 
-    \begin{frame}{Value network}
+    \begin{frame}{Value Network}
       \todo
     \end{frame}
 
-    \begin{frame}{Selection of~moves by the value network}
+    \begin{frame}{Selection of~Moves by the Value Network}
       \begin{center}
         \includegraphics[height=.75\textheight]{../img/move_selection_by_value_network.png}
       \end{center}
@@ -224,37 +224,37 @@
       evaluation of~all successors $s'$ of~the root position~$s$, using~$v_\theta(s′)$
     \end{frame}
 
-    \begin{frame}{ELO ratings for~various combinations of~networks}
+    \begin{frame}{ELO Ratings for~Various Combinations of~Networks}
       \begin{center}
         \includegraphics[height=.85\textheight]{../img/ELO_ratings_various_combinations_of_ANNs.png}
       \end{center}
     \end{frame}
 
-    \begin{frame}{MCTS with neural networks (1/4)}
+    \begin{frame}{MCTS with Neural Networks (1/4)}
       \begin{center}
         \includegraphics[height=.85\textheight]{../img/MCTS_selection.png}
       \end{center}
     \end{frame}
 
-    \begin{frame}{MCTS with neural networks (2/4)}
+    \begin{frame}{MCTS with Neural Networks (2/4)}
       \begin{center}
         \includegraphics[height=.85\textheight]{../img/MCTS_expansion.png}
       \end{center}
     \end{frame}
 
-    \begin{frame}{MCTS with neural networks (3/4)}
+    \begin{frame}{MCTS with Neural Networks (3/4)}
       \begin{center}
         \includegraphics[height=.85\textheight]{../img/MCTS_evaluation.png}
       \end{center}
     \end{frame}
 
-    \begin{frame}{MCTS with neural networks (4/4)}
+    \begin{frame}{MCTS with Neural Networks (4/4)}
       \begin{center}
         \includegraphics[height=.85\textheight]{../img/MCTS_backup.png}
       \end{center}
     \end{frame}
 
-    \begin{frame}{Tree evaluation from value network}
+    \begin{frame}{Tree Evaluation from Value Network}
       \begin{center}
         \includegraphics[height=.65\textheight]{../img/tree_eval_from_value_network.png}
       \end{center}
@@ -262,7 +262,7 @@
       action values~$Q(s, a)$ for~each tree-edge~$(s, a)$ from root position~$s$ (averaged over value network evaluations only)
     \end{frame}
 
-    \begin{frame}{Tree evaluation from rollouts}
+    \begin{frame}{Tree Evaluation from Rollouts}
       \begin{center}
         \includegraphics[height=.65\textheight]{../img/tree_eval_from_rollouts.png}
       \end{center}
@@ -271,7 +271,7 @@
       \vskip 1.45em
     \end{frame}
 
-    \begin{frame}{Percentage of~simulations}
+    \begin{frame}{Percentage of~Simulations}
       \begin{center}
         \includegraphics[height=.65\textheight]{../img/percentage_of_simulations.png}
       \end{center}
@@ -280,7 +280,7 @@
       \vskip 1.45em
     \end{frame}
 
-    \begin{frame}{Principal variation (path with maximum visit count)}
+    \begin{frame}{Principal Variation (Path with Maximum Visit Count)}
       \begin{center}
         \includegraphics[height=.65\textheight]{../img/principal_variation.png}
       \end{center}
@@ -303,7 +303,7 @@
       \todo
     \end{frame}
 
-    \begin{frame}{ELO ratings for~various combinations of~threads}
+    \begin{frame}{ELO Ratings for~Various Combinations of~Threads}
       \begin{center}
         \vskip -1ex
         \includegraphics[height=.9\textheight]{../img/ELO_ratings_various_combinations_of_threads.png}
@@ -317,18 +317,18 @@
 
   {
     \setbeamertemplate{frame footer}{\cite{Silver2016mastering}}
-    \begin{frame}{Tournament with other Go programs}
+    \begin{frame}{Tournament with Other Go Programs}
       \begin{center}
         \vskip -1ex
         \includegraphics[height=.95\textheight]{../img/results_of_tournament.png}
       \end{center}
     \end{frame}
 
-    \begin{frame}{AlphaGo vs. Fan Hui}
+    \begin{frame}{AlphaGo versus Fan Hui}
       \todo
     \end{frame}
 
-    \begin{frame}{AlphaGo vs. Lee Sedol}
+    \begin{frame}{AlphaGo versus Lee Sedol}
       \todo
     \end{frame}
   }
@@ -358,7 +358,7 @@
     Backup slides
   \end{frame}
 
-  \begin{frame}{Further reading}
+  \begin{frame}{Further Reading}
     AI:
     \begin{itemize}
       \item \textbf{Singularity} \url{http://waitbutwhy.com/2015/01/artificial-intelligence-revolution-1.html} + Part 2
