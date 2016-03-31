@@ -250,7 +250,16 @@
         \includegraphics[height=.65\textheight]{../img/tree_eval_from_value_network.png}
       \end{center}
       \vskip -1ex
-      Action values~$Q(s, a)$ for~each edge~$(s, a)$ in~the tree from root position $s$ (averaged over value network evaluations only)
+      Action values~$Q(s, a)$ for~each tree-edge~$(s, a)$ from root position~$s$ (averaged over value network evaluations only)
+    \end{frame}
+
+    \begin{frame}{Tree evaluation from rollouts}
+      \begin{center}
+        \includegraphics[height=.65\textheight]{../img/tree_eval_from_rollouts.png}
+      \end{center}
+      \vskip -1ex
+      Action values $Q(s, a)$, averaged over rollout evaluations only
+      \vskip 1.45em
     \end{frame}
 
     \begin{frame}{Scalability}
