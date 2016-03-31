@@ -205,7 +205,7 @@
         \includegraphics[height=.65\textheight]{../img/eval_SL_policy_network.png}
       \end{center}
       \vskip -1ex
-      Move probabilities directly from the SL policy network $p_\sigma$ (reported as a~percentage if above $0.1\%$).
+      move probabilities taken directly from the SL policy network $p_\sigma$ (reported as a~percentage if above $0.1\%$).
     \end{frame}
 
     \begin{frame}{RL policy networks}
@@ -217,12 +217,11 @@
     \end{frame}
 
     \begin{frame}{Selection of~moves by the value network}
-      \pause
       \begin{center}
         \includegraphics[height=.75\textheight]{../img/move_selection_by_value_network.png}
       \end{center}
       \vskip -1ex
-      Evaluation of~all successors $s'$ of~the root position~$s$, using~$v_\theta(s′)$.
+      evaluation of~all successors $s'$ of~the root position~$s$, using~$v_\theta(s′)$
     \end{frame}
 
     \begin{frame}{ELO ratings for~various combinations of~networks}
@@ -260,7 +259,7 @@
         \includegraphics[height=.65\textheight]{../img/tree_eval_from_value_network.png}
       \end{center}
       \vskip -1ex
-      Action values~$Q(s, a)$ for~each tree-edge~$(s, a)$ from root position~$s$ (averaged over value network evaluations only)
+      action values~$Q(s, a)$ for~each tree-edge~$(s, a)$ from root position~$s$ (averaged over value network evaluations only)
     \end{frame}
 
     \begin{frame}{Tree evaluation from rollouts}
@@ -268,7 +267,7 @@
         \includegraphics[height=.65\textheight]{../img/tree_eval_from_rollouts.png}
       \end{center}
       \vskip -1ex
-      Action values $Q(s, a)$, averaged over rollout evaluations only
+      action values $Q(s, a)$, averaged over rollout evaluations only
       \vskip 1.45em
     \end{frame}
 
@@ -277,12 +276,11 @@
         \includegraphics[height=.65\textheight]{../img/percentage_of_simulations.png}
       \end{center}
       \vskip -1ex
-      Percentage frequency with which actions were selected from the root during simulations.
+      percentage frequency with which actions were selected from the root during simulations
       \vskip 1.45em
     \end{frame}
 
     \begin{frame}{Principal variation (path with maximum visit count)}
-      \pause
       \begin{center}
         \includegraphics[height=.65\textheight]{../img/principal_variation.png}
       \end{center}
