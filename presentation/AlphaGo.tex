@@ -1,6 +1,7 @@
 \documentclass{beamer}
 \usetheme{metropolis}           % Use metropolis theme
 \usepackage{appendixnumberbeamer}
+\usepackage{epigraph}
 
 %%% Bibliography
 \usepackage[backend=bibtex, style=authoryear]{biblatex}
@@ -199,9 +200,23 @@
         \item $d$ is its depth (game length)
       \end{itemize}
     \end{frame}
+  }
 
-    \begin{frame}{Game-tree of Go}
-      \todo
+  {
+    \setbeamertemplate{frame footer}{\cite{Allis1994searching}}
+    \begin{frame}{Game-tree of~Go}
+      Sizes of~trees for~various games:
+      \begin{itemize}
+        \item chess: $b \approx 35, d \approx 80$
+        \item Go: $b \approx 250, d \approx 150$
+          \pause
+          $\Rightarrow$ more positions than atoms in the universe!
+      \end{itemize}
+      \pause
+
+      \epigraph{
+        That makes Go a \textbf{googol} times more complex than chess.
+      }{\tiny\url{https://deepmind.com/alpha-go.html}}
     \end{frame}
   }
 
