@@ -179,9 +179,31 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
   \section{Monte Carlo Tree Search}
-  \begin{frame}{Game-tree of Go}
-    \todo
-  \end{frame}
+  {
+    \setbeamertemplate{frame footer}{\cite{Silver2016mastering}}
+    \begin{frame}{Tree Search}
+      Optimal value~$v^*(s)$ determines the~outcome of~the game:
+      \pause
+      \begin{itemize}[<+- | alert@+>]
+          \tiny
+        \item from every board position or state $s$
+        \item under perfect play by~all players.
+      \end{itemize}
+      \pause
+
+      It is computed by~\textbf{recursively traversing a~search tree} containing approximately $b^d$ possible sequences of moves, where
+      \pause
+      \begin{itemize}[<+- | alert@+>]
+          \tiny
+        \item $b$ is the game’s breadth (number of legal moves per position)
+        \item $d$ is its depth (game length)
+      \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Game-tree of Go}
+      \todo
+    \end{frame}
+  }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
