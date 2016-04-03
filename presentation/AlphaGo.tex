@@ -259,6 +259,7 @@
 
       \vskip -1em
       How to handle the size~of the game tree?
+      \pause
       \begin{itemize}[<+- | alert@+>]
         \item for the breadth: a~neural network to~select moves 
         \item for the depth: a~neural network to~evaluate current position
@@ -274,11 +275,30 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
   \section{Neural networks}
-  \begin{frame}{Neural Network}
+  \begin{frame}{Neural Network (1/)}
     \begin{center}
       \includegraphics[height=.8\textheight]{../img/colored_neural_network.png}
     \end{center}
   \end{frame}
+
+  {
+    \setbeamertemplate{frame footer}{\cite{Dieterle2003multianalyte}}
+    \begin{frame}{Neural Network (2/)}
+      \begin{center}
+        \includegraphics[height=.8\textheight]{../img/neural_network_forward_and_backprop.png}
+      \end{center}
+    \end{frame}
+  }
+
+  {
+    \setbeamercolor{background canvas}{bg=gray!10}
+    \setbeamertemplate{frame footer}{\url{http://stevenmiller888.github.io/mind-how-to-build-a-neural-network/}}
+    \begin{frame}{Neural Network (3/)}
+      \begin{center}
+        \includegraphics[width=\textwidth]{../img/feed_forward_example.png}
+      \end{center}
+    \end{frame}
+  }
 
   \begin{frame}{Deep Neural Network}
     \todo
