@@ -239,7 +239,7 @@
 
   {
     \setbeamertemplate{frame footer}{\cite{Allis1994searching}}
-    \begin{frame}{Game-tree of~Go}
+    \begin{frame}{Game tree of~Go}
       Sizes of~trees for~various games:
       \begin{itemize}
         \item chess: $b \approx 35, d \approx 80$
@@ -252,6 +252,15 @@
       \epigraph{
         That makes Go a \textbf{googol} times more complex than chess.
       }{\tiny\url{https://deepmind.com/alpha-go.html}}
+      \pause
+
+      \vskip -1em
+      How to handle the size~of the game tree?
+      \begin{itemize}[<+- | alert@+>]
+        \item for the breadth: a~neural network to~select moves 
+        \item for the depth: a~neural network to~evaluate current position
+        \item for the tree traverse: Monte Carlo tree search (MCTS)
+      \end{itemize}
     \end{frame}
   }
 
