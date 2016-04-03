@@ -275,11 +275,26 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
   \section{Neural networks}
-  \begin{frame}{Neural Network (1/)}
-    \begin{center}
-      \includegraphics[height=.8\textheight]{../img/colored_neural_network.png}
-    \end{center}
-  \end{frame}
+  {
+    \setbeamertemplate{frame footer}{\url{http://pages.cs.wisc.edu/~bolo/shipyard/neural/local.html}}
+    \begin{frame}{Neural Network: Inspiration}
+      \vskip -2em
+      \begin{center}
+        \includegraphics[height=.5\textheight]{../img/colored_neural_network.png}
+      \end{center}
+
+      \pause
+      \begin{itemize}[<+- | alert@+>]
+          %\tiny
+        \item inspired by~the neuronal structure of~the mamalian cerebral cortex
+        \item but on~much smaller scales
+        \item suitable to model systems with a~high tolerance to~error 
+          \begin{itemize}
+            \item e.g.~audio or~image recognition
+          \end{itemize}
+      \end{itemize}
+    \end{frame}
+  }
 
   {
     \setbeamertemplate{frame footer}{\cite{Dieterle2003multianalyte}}
