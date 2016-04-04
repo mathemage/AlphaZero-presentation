@@ -440,8 +440,36 @@
       \end{center}
     \end{frame}
 
-    \begin{frame}{RL Policy Networks}
-      \todo
+    \begin{frame}{RL Policy Networks (1/2)}
+      \begin{itemize}[<+- | alert@+>]
+        \item identical in~structure to the SL policy network
+        \item weights $\rho$ initialized to the same values, $\rho := \sigma$
+        \item games of self-play
+          \begin{itemize}[<+- | alert@+>]
+            \item between the current RL policy network and a~randomly selected previous iteration
+            \item to prevent overfitting to~the current policy
+          \end{itemize}
+        \item stochastic gradient ascent:
+          \[
+            \Delta \rho \propto \frac{\partial \log p_\rho (a_t|s_t)}{\partial \rho} z_t
+          \]
+          {\tiny at~time step~$t$, where reward function~$z_t$ is $+1$ for winning and $-1$ for losing.}
+      \end{itemize}
+      \pause
+    \end{frame}
+
+    \begin{frame}{RL Policy Networks (2/2)}
+      Results (by sampling each move $a_t \sim p_\rho(\cdot | s_t)$):
+      \pause
+      \begin{itemize}[<+- | alert@+>]
+        \item $80\%$ of~win rate against the SL policy network
+        \item $85\%$ of~win rate against the strongest open-source Go program, \textbf{Pachi} (\cite{Baudivs2011pachi})
+          \begin{itemize}[<+- | alert@+>]
+            \item The previous state-of-the-art, based only on~SL of~CNN: \\
+              \pause
+              $11\%$ of~``win'' rate against Pachi
+          \end{itemize}
+      \end{itemize}
     \end{frame}
 
     \begin{frame}{Value Network}
