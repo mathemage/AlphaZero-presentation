@@ -14,11 +14,11 @@
 \setbeamercolor{institute}{fg=white}
 
 \newcommand{\todo}{\alert{TODO}}
-
-\renewcommand{\itemBullet}{\scriptsize$\blacksquare$}
+\newcommand{\itemBullet}{\scriptsize$\blacksquare$}
 \setbeamertemplate{itemize item}{\itemBullet}
 \setbeamertemplate{itemize subitem}{\itemBullet}
 \setbeamertemplate{itemize subsubitem}{\itemBullet}
+\newcommand{\E}{\mathop{\mathbb{E}}}
 
 \title{Mastering the game of Go}
 \subtitle{with deep neural networks and tree search}
@@ -411,6 +411,7 @@
       \begin{itemize}[<+- | alert@+>]
         \item 13-layer deep convolutional neural network
         \item goal: to~predict expert human moves
+        \item task of \textbf{classification}
         \item trained from 30 millions positions from the KGS Go Server
         \item stochastic gradient ascent:
           \[
@@ -426,11 +427,11 @@
         \item $44.4\%$ accuracy (the state-of-the-art from other groups)
         \item $55.7\%$ accuracy (raw board position + move history as~input)
         \item $57.0\%$ accuracy (all input features)
-        \item small improvements in~accuracy led to~large improvements in~playing strength (see the next slide)
       \end{itemize}
     \end{frame}
 
     \begin{frame}{SL Policy Networks (2/3)}
+      Small improvements in~accuracy led to~large improvements in~playing strength (see the next slide)
       \begin{center}
         \includegraphics[width=\textwidth]{../img/SL_policy_accuracy_vs_win_rate.png}
       \end{center}
@@ -448,6 +449,8 @@
     \begin{frame}{RL Policy Networks (1/2)}
       \begin{itemize}[<+- | alert@+>]
         \item identical in~structure to the SL policy network
+        \item goal: to~win in~the games of~self-play
+        \item task of \textbf{classification}
         \item weights $\rho$ initialized to the same values, $\rho := \sigma$
         \item games of self-play
           \begin{itemize}[<+- | alert@+>]
@@ -478,7 +481,21 @@
     \end{frame}
 
     \begin{frame}{Value Network}
-      \todo
+      \begin{itemize}[<+- | alert@+>]
+        \item similar architecture to the policy network, but outputs a~single prediction instead of~a~probability distribution
+        \item goal: to estimate a~value function
+          \[
+            v^p(s) = \E [z_t | s_t = s, a_{t \dots T} \sim p]
+          \]
+          that predicts the outcome from position~$s$ (of~games played by~using policy $p$)
+        \item Specifically, $v_\theta(s) \approx v^{p_\rho}(s) \approx v^*(s)$.
+        \item task of~\textbf{regression}
+        \item stochastic gradient descent:
+          \[
+            \Delta \theta \propto \frac{\partial v_\theta (s)}{\partial \theta} (z - v_\theta(s))
+          \]
+          {\tiny (to~minimize the mean squared error (MSE) between the predicted $v_\theta(s)$ and the true $z$)}
+      \end{itemize}
     \end{frame}
 
     \begin{frame}{Selection of~Moves by the Value Network}
