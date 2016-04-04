@@ -403,7 +403,26 @@
     \end{frame}
 
     \begin{frame}{SL Policy Networks (1/2)}
-      \todo
+      \begin{itemize}[<+- | alert@+>]
+        \item 13-layer deep convolutional neural network
+        \item goal: to~predict expert human moves
+        \item trained from 30 millions positions from the KGS Go Server
+        \item stochastic gradient ascent:
+          \[
+            \Delta \sigma \propto \frac{\partial \log p_\sigma (a|s)}{\partial \sigma}
+          \]
+          {\tiny (to~maximize the likelihood of~the human move~$a$ selected in~state~$s$)}
+      \end{itemize}
+      \pause
+
+      Results:
+      \pause
+      \begin{itemize}[<+- | alert@+>]
+        \item $44.4\%$ accuracy (the state-of-the-art from other groups)
+        \item $55.7\%$ accuracy (raw board position + move history as~input)
+        \item $57.0\%$ accuracy (all input features)
+        \item small improvements in~accuracy led to~large improvements in~playing strength
+      \end{itemize}
     \end{frame}
 
     \begin{frame}{SL Policy Networks (2/2)}
