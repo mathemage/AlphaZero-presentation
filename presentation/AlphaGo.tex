@@ -480,7 +480,7 @@
       \end{itemize}
     \end{frame}
 
-    \begin{frame}{Value Network}
+    \begin{frame}{Value Network (1/2)}
       \begin{itemize}[<+- | alert@+>]
         \item similar architecture to the policy network, but outputs a~single prediction instead of~a~probability distribution
         \item goal: to estimate a~value function
@@ -495,6 +495,17 @@
             \Delta \theta \propto \frac{\partial v_\theta (s)}{\partial \theta} (z - v_\theta(s))
           \]
           {\tiny (to~minimize the mean squared error (MSE) between the predicted $v_\theta(s)$ and the true $z$)}
+      \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Value Network (2/2)}
+      Beware of~overfitting!
+      \pause
+      \begin{itemize}[<+- | alert@+>]
+        \item Successive positions are strongly correlated.
+        \item Value network memorized the game outcomes, rather than generalizing to new positions.
+        \item Solution: generate 30 million (new) positions, each sampled from a~\textbf{seperate} game
+        \item almost the accuracy of~Monte Carlo rollouts (using $p_\rho$), but $15000$ times less computation!
       \end{itemize}
     \end{frame}
 
