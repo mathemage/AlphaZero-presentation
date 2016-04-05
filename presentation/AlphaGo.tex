@@ -705,12 +705,6 @@
       \]
     \end{frame}
 
-    \begin{frame}{MCTS with Neural Networks (4/4)}
-      \begin{center}
-        \includegraphics[height=.85\textheight]{../img/MCTS_backup.png}
-      \end{center}
-    \end{frame}
-
     \begin{frame}{Tree Evaluation from Value Network}
       \begin{center}
         \includegraphics[height=.82\textheight]{../img/tree_eval_from_value_network.png}
@@ -727,6 +721,19 @@
         \tiny
         action values $Q(s, a)$, averaged over rollout evaluations only
       \end{center}
+    \end{frame}
+
+    \begin{frame}{MCTS: Backup}
+      \begin{center}
+        \includegraphics[height=.6\textheight]{../img/MCTS_backup.png}
+      \end{center}
+      
+      \tiny
+      At the end of~simulation, each traversed edge is \textbf{updated} by accumulating:
+        \begin{itemize}[<+- | alert@+>]
+          \item the action values $Q$
+          \item visit counts $N$
+        \end{itemize}
     \end{frame}
 
     \begin{frame}{Percentage of~Simulations}
