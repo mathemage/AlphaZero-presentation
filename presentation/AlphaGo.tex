@@ -601,6 +601,22 @@
       \end{center}
     \end{frame}
 
+    \begin{frame}{MSE in~various stages of a~game}
+      \includegraphics[width=\textwidth]{../img/policies_move_numbers_vs_MSE.png}
+
+      \vskip -2.4ex
+      {\tiny
+      \textbf{Move number} is the number of~moves that had been played in the given position.
+      }
+
+      \pause
+        Each position evaluated by:
+        \begin{itemize}[<+- | alert@+>]
+          \item forward pass of the value network~$v_\theta$
+          \item 100 rollouts, played out using the corresponding policy
+        \end{itemize}
+    \end{frame}
+
     \begin{frame}{MCTS with Neural Networks (1/4)}
       \begin{center}
         \includegraphics[height=.85\textheight]{../img/MCTS_selection.png}
