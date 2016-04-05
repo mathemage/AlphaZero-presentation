@@ -3,6 +3,7 @@
 \usepackage{appendixnumberbeamer}
 \usepackage{epigraph}
 \usepackage{color}
+\usepackage{amsopn}
 
 %%% Bibliography
 \usepackage[backend=bibtex, style=authoryear]{biblatex}
@@ -20,6 +21,7 @@
 \setbeamertemplate{itemize subitem}{\itemBullet}
 \setbeamertemplate{itemize subsubitem}{\itemBullet}
 \newcommand{\E}{\mathop{\mathbb{E}}}
+\DeclareMathOperator*{\argmax}{arg\,max}
 
 \title{Mastering the game of Go}
 \subtitle{with deep neural networks and tree search}
@@ -634,6 +636,7 @@
 
     \begin{frame}{MCTS Algorithm}
       The next action is selected by~lookahead search, using simulation:
+      \pause
       \begin{enumerate}[<+- | alert@+>]
         \item selection phase
         \item expansion phase
@@ -641,12 +644,34 @@
         \item backup phase (at~end of~simulation)
       \end{enumerate}
       \pause
+
+      Each edge $(s, a)$ keeps:
+      \begin{itemize}[<+- | alert@+>]
+        \item action value~$Q(s, a)$
+        \item visit count~$N(s, a)$
+        \item prior probability~$P(s, a)$ (from SL policy network $p_\sigma$)
+      \end{itemize}
+      \pause
+
+      The tree is traversed by simulation (descending the tree) from the root state.
     \end{frame}
 
-    \begin{frame}{MCTS with Neural Networks (1/4)}
+    \begin{frame}{MCTS Algorithm: Selection}
       \begin{center}
-        \includegraphics[height=.85\textheight]{../img/MCTS_selection.png}
+        \includegraphics[height=.6\textheight]{../img/MCTS_selection.png}
       \end{center}
+      \pause
+
+      \tiny
+      At each time step~$t$, an~action~$a_t$ is selected from state $s_t$
+      \[
+        a_t = \argmax _a ( Q(s_t, a) + u(s_t, a) )
+      \]
+      \pause
+      where bonus
+      \[
+        u(s_t, a) \propto \frac{P(s,a)}{1 + N(s,a)}
+      \]
     \end{frame}
 
     \begin{frame}{MCTS with Neural Networks (2/4)}
