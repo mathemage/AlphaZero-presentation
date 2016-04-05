@@ -865,60 +865,63 @@
 
   \section{Conclusion}
 
-  \begin{frame}{Difficulties of~Go}
-    \begin{itemize}[<+- | alert@+>]
-      \item challenging decision-making
-      \item intractable search space
-      \item complex optimal solution
-      
-        {\tiny It appears infeasible to directly approximate using a~policy or value function!}
-    \end{itemize}
-  \end{frame}
+  {
+    \setbeamertemplate{frame footer}{\cite{Silver2016mastering}}
+    \begin{frame}{Difficulties of~Go}
+      \begin{itemize}[<+- | alert@+>]
+        \item challenging decision-making
+        \item intractable search space
+        \item complex optimal solution
 
-  \begin{frame}{AlphaGo: summary}
-    \begin{itemize}[<+- | alert@+>]
-      \item Monte Carlo tree search
-      \item effective move selection and position evaluation 
-        \begin{itemize}[<+- | alert@+>]
-          \item through deep convolutional neural networks
-          \item trained by novel combination of~supervised and reinforcement learning
-        \end{itemize}
-      \item new search algorithm combining
-        \begin{itemize}[<+- | alert@+>]
-          \item neural network evaluation
-          \item Monte Carlo rollouts
-        \end{itemize}
-      \item scalable implementation
-        \begin{itemize}[<+- | alert@+>]
-          \item multi-threaded simulations on CPUs
-          \item parallel GPU computations
-          \item distributed version over multiple machines
-        \end{itemize}
-    \end{itemize}
-  \end{frame}
- 
-  \begin{frame}{Novel approach}
-    \pause
-    During the match against Fan Hui, AlphaGo evaluated \textbf{thousands of~times} fewer positions than DeepBlue against Kasparov.
-    \pause
+          {\tiny It appears infeasible to directly approximate using a~policy or value function!}
+      \end{itemize}
+    \end{frame}
 
-    It compensated this by:
-    \begin{itemize}[<+- | alert@+>]
-      \item selecting those positions \textbf{more intelligently} (policy network)
-      \item evaluating them \textbf{more precisely} (value network)
-    \end{itemize}
-    \pause
+    \begin{frame}{AlphaGo: summary}
+      \begin{itemize}[<+- | alert@+>]
+        \item Monte Carlo tree search
+        \item effective move selection and position evaluation 
+          \begin{itemize}[<+- | alert@+>]
+            \item through deep convolutional neural networks
+            \item trained by novel combination of~supervised and reinforcement learning
+          \end{itemize}
+        \item new search algorithm combining
+          \begin{itemize}[<+- | alert@+>]
+            \item neural network evaluation
+            \item Monte Carlo rollouts
+          \end{itemize}
+        \item scalable implementation
+          \begin{itemize}[<+- | alert@+>]
+            \item multi-threaded simulations on CPUs
+            \item parallel GPU computations
+            \item distributed version over multiple machines
+          \end{itemize}
+      \end{itemize}
+    \end{frame}
 
-    Deep Blue relied on a~handcrafted evaluation function.
-    \pause
+    \begin{frame}{Novel approach}
+      \pause
+      During the match against Fan Hui, AlphaGo evaluated \textbf{thousands of~times} fewer positions than DeepBlue against Kasparov.
+      \pause
 
-    AlphaGo was trained \textbf{directly and automatically} from gameplay.
-    It used \textbf{general-purpose} learning.
-    \pause
+      It compensated this by:
+      \begin{itemize}[<+- | alert@+>]
+        \item selecting those positions \textbf{more intelligently} (policy network)
+        \item evaluating them \textbf{more precisely} (value network)
+      \end{itemize}
+      \pause
 
-    This approach is not specific to the game of Go.
-    The algorithm can be used \textbf{for much wider class} of~(so far seemingly) intractable problems in~AI!
-  \end{frame}
+      Deep Blue relied on a~handcrafted evaluation function.
+      \pause
+
+      AlphaGo was trained \textbf{directly and automatically} from gameplay.
+      It used \textbf{general-purpose} learning.
+      \pause
+
+      This approach is not specific to the game of Go.
+      The algorithm can be used \textbf{for much wider class} of~(so far seemingly) intractable problems in~AI!
+    \end{frame}
+  }
   
   \begin{frame}[standout]
     \begin{center}
