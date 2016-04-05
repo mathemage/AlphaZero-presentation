@@ -2,6 +2,7 @@
 \usetheme{metropolis}           % Use metropolis theme
 \usepackage{appendixnumberbeamer}
 \usepackage{epigraph}
+\usepackage{color}
 
 %%% Bibliography
 \usepackage[backend=bibtex, style=authoryear]{biblatex}
@@ -746,7 +747,7 @@
     \begin{center}
       \includegraphics[width=.55\textwidth]{../img/Fan_Hui_loses.jpg}
     \end{center}
-    AlphaGo \textbf{won 5 - 0} in a~formal match on~October 2015.
+    \textbf{AlphaGo won 5 - 0} in a~formal match on~October 2015.
     \pause
 
     \vskip -1em
@@ -778,7 +779,6 @@
 
   {
     \usebackgroundtemplate{
-      %\includegraphics[height=\paperheight]{../img/Lee_Sedol_after_match.jpg}
       \includegraphics[height=\paperheight]{../img/Lee_Sedol_quotes.jpg}
     }
     \begin{frame}[standout]
@@ -796,8 +796,31 @@
     \end{frame}
   }
 
+  {
+    \usebackgroundtemplate{
+      \includegraphics[height=\paperheight]{../img/Lee_Sedol_after_match.jpg}
+    }
+    \setbeamertemplate{frame footer}{\color{white}\url{https://en.wikipedia.org/wiki/AlphaGo_versus_Lee_Sedol}}
     \begin{frame}{AlphaGo versus Lee Sedol}
+      \pause
+
+      \vskip 1em
+      \color{white}
+      In March 2016 \textbf{AlphaGo won 4-1} against the legendary Lee Sedol.
+      \pause
+
+      AlphaGo won all but the $4^{th}$ game; all games were won by~resignation.
+      \pause
+
+      The winner of~the match was slated to win \$1 million.
+      \pause
+
+      Since AlphaGo won, Google DeepMind stated that the prize will be donated to~charities, including~UNICEF, and Go organisations.
+      \pause
+
+      Lee received \$170,000 (\$150,000 for participating in all the five games, and an additional \$20,000 for each game won).
     \end{frame}
+  }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
