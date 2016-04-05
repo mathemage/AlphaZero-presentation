@@ -687,10 +687,22 @@
       The output probabilities are stored as priors $P(s,a) = p_\sigma (a|s)$.
     \end{frame}
 
-    \begin{frame}{MCTS with Neural Networks (3/4)}
+    \begin{frame}{MCTS: Evaluation}
       \begin{center}
-        \includegraphics[height=.85\textheight]{../img/MCTS_evaluation.png}
+        \includegraphics[height=.6\textheight]{../img/MCTS_evaluation.png}
       \end{center}
+      \pause
+
+      \tiny
+      \begin{itemize}[<+- | alert@+>]
+        \item evaluation from the value network $v_\theta (s)$
+        \item evaluation by the outcome~$z$ using the fast rollout policy $p_\pi$ until the~end of~game
+      \end{itemize}
+      \pause
+      Using a~mixing parameter~$\lambda$, the final leaf evaluation $V(s)$ is
+      \[
+        V(s) = (1 - \lambda) v_\theta(s) + \lambda z
+      \]
     \end{frame}
 
     \begin{frame}{MCTS with Neural Networks (4/4)}
