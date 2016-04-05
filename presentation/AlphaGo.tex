@@ -291,8 +291,7 @@
 
       \pause
       \begin{itemize}[<+- | alert@+>]
-          %\tiny
-        \item inspired by~the neuronal structure of~the mamalian cerebral cortex
+        \item inspired by~the neuronal structure of~the mammalian cerebral cortex
         \item but on~much smaller scales
         \item suitable to model systems with a~high tolerance to~error 
           \begin{itemize}
@@ -696,7 +695,27 @@
     \end{frame}
 
     \begin{frame}{Scalability}
-      \todo
+      \begin{itemize}[<+- | alert@+>]
+        \item asynchronous multi-threaded search
+        \item simulations on~CPUs
+        \item computation of~neural networks on GPUs
+      \end{itemize}
+      \pause
+
+      AlphaGo:
+      \begin{itemize}[<+- | alert@+>]
+        \item 40 search threads
+        \item 40 CPUs
+        \item 8 GPUs
+      \end{itemize}
+      \pause
+
+      Distributed version of AlphaGo (on~multiple machines):
+      \begin{itemize}[<+- | alert@+>]
+        \item 40 search threads
+        \item 1202 CPUs
+        \item 176 GPUs
+      \end{itemize}
     \end{frame}
 
     \begin{frame}{ELO Ratings for~Various Combinations of~Threads}
