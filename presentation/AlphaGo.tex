@@ -632,6 +632,17 @@
       \end{center}
     \end{frame}
 
+    \begin{frame}{MCTS Algorithm}
+      The next action is selected by~lookahead search, using simulation:
+      \begin{enumerate}[<+- | alert@+>]
+        \item selection phase
+        \item expansion phase
+        \item evaluation phase
+        \item backup phase (at~end of~simulation)
+      \end{enumerate}
+      \pause
+    \end{frame}
+
     \begin{frame}{MCTS with Neural Networks (1/4)}
       \begin{center}
         \includegraphics[height=.85\textheight]{../img/MCTS_selection.png}
