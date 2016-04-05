@@ -674,10 +674,17 @@
       \]
     \end{frame}
 
-    \begin{frame}{MCTS with Neural Networks (2/4)}
+    \begin{frame}{MCTS Algorithm: Expansion}
       \begin{center}
-        \includegraphics[height=.85\textheight]{../img/MCTS_expansion.png}
+        \includegraphics[height=.6\textheight]{../img/MCTS_expansion.png}
       \end{center}
+      \pause
+
+      \tiny
+      A~leaf position may be expanded (just once) by the SL policy network~$p_\sigma$.
+      \pause
+
+      The output probabilities are stored as priors $P(s,a) = p_\sigma (a|s)$.
     \end{frame}
 
     \begin{frame}{MCTS with Neural Networks (3/4)}
