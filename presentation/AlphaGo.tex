@@ -877,6 +877,29 @@
     \end{itemize}
   \end{frame}
  
+  \begin{frame}{Novel approach}
+    \pause
+    During the match against Fan Hui, AlphaGo evaluated \textbf{thousands of~times} fewer positions than DeepBlue against Kasparov.
+    \pause
+
+    It compensated this by:
+    \begin{itemize}[<+- | alert@+>]
+      \item selecting those positions \textbf{more intelligently} (policy network)
+      \item evaluating them \textbf{more precisely} (value network)
+    \end{itemize}
+    \pause
+
+    Deep Blue relied on a~handcrafted evaluation function.
+    \pause
+
+    AlphaGo was trained \textbf{directly and automatically} from gameplay.
+    It used \textbf{general-purpose} learning.
+    \pause
+
+    This approach is not specific to the game of Go.
+    The algorithm can be used \textbf{for much wider class} of~(so far seemingly) intractable problems in~AI!
+  \end{frame}
+  
   \begin{frame}[standout]
     \begin{center}
       Thank you!
