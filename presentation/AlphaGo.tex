@@ -5,6 +5,15 @@
 \usepackage{color}
 \usepackage{amsopn}
 
+%%% Czech language
+%\usepackage[utf8x]{inputenc}
+%\usepackage[czech]{babel}
+%\usepackage{ucs}
+%\usepackage{czech}
+%\usepackage[utf8]{inputenc}
+%\usepackage[czech]{babel}
+%\DeclareUnicodeCharacter{00A0}{~}
+
 %%% Bibliography
 \usepackage[backend=bibtex, style=authoryear]{biblatex}
 \AtBeginBibliography{\tiny}
@@ -384,13 +393,16 @@
     \end{center}
   \end{frame}
 
-  \begin{frame}{Classic games (2/2)}
-    \begin{center}
-      Go: Man vs. Self
+  {
+    \setbeamertemplate{frame footer}{Robert \v{S}\'{a}mal (White) versus Karel Kr\'{a}l (Black), Spring School of Combinatorics 2016}
+    \begin{frame}{Classic games (2/2)}
+      \begin{center}
+        Go: Man vs. Self
 
-      \includegraphics[width=.9\textwidth]{../img/Go_Samal_vs_Kral.jpg}
-    \end{center}
-  \end{frame}
+        \includegraphics[width=\textwidth]{../img/Go_Samal_vs_Kral.jpg}
+      \end{center}
+    \end{frame}
+  }
 
   \begin{frame}{Rules of Go}
     \pause
