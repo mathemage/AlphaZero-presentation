@@ -1,7 +1,7 @@
 AlphaGo-presentation
 --------------------
 
-the presentation for the Spring School of Combinatorics 2016 on the paper "Mastering the Game of Go with Deep Neural Networks and Tree Search" by Google DeepMind: http://kam.mff.cuni.cz/~spring/2016/papers/go.pdf
+the presentation for the Spring School of Combinatorics 2016 on the paper "Mastering the Game of Go with Deep Neural Networks and Tree Search" by Google DeepMind
 
 Annotation
 ~~~~~~~~~~
