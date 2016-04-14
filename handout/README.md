@@ -6,7 +6,7 @@ This is the handout for presentation of the article [Mastering the game of Go wi
 
 ### Requirements
 
-The presentation was made using LaTeX. 
+The handout was made using LaTeX. 
 
 To compile the handout, you must
 
