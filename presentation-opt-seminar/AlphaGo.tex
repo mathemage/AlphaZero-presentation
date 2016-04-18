@@ -91,9 +91,26 @@
 
   {
     \setbeamertemplate{frame footer}{\cite{DeepDrumpf}}
-    \begin{frame}{DeepDrumpf}
-      a~Twitter bot that has learned the~language of~Donald Trump from his speeches 
-      \includegraphics[width=\textwidth]{../img/DeepDrumpf.png}
+    \usebackgroundtemplate{
+      \includegraphics[height=\paperheight, width=\paperwidth, keepaspectratio]{../img/DeepDrumpf_zoomed_in.png}
+    }
+
+    \begin{frame}{DeepDrumpf: a~Twitter bot / neural network which learned the~language of Donald Trump from his speeches}
+      \pause
+
+      \vskip 5.25cm
+      \begin{itemize}[<+- | alert@+>]
+          \tiny
+        \item We've got nuclear weapons that are obsolete.
+          I'm going to create jobs just by making the worst thing ever.
+        \item The biggest risk to the world, is me, believe it or not.
+        \item I am what ISIS doesn't need.
+        \item I'd like to beat that \href{https://twitter.com/hillaryclinton}{@HillaryClinton}.
+          She is a horror.
+          I told my supporter Putin to say that all the time.
+          He has been amazing.
+        \item I buy Hillary, it's beautiful and I'm happy about it.
+      \end{itemize}
     \end{frame}
   }
 
