@@ -583,8 +583,8 @@
           \[
             v^p(s) = \E [z_t | s_t = s, a_{t \dots T} \sim p]
           \]
-          that predicts the outcome from position~$s$ (of~games played by~using policy $p_\rho$)
-        \item Specifically, $v_\theta(s) \approx v^{p_\rho}(s) \approx v^*(s)$.
+          that predicts the outcome from position~$s$ (of~games played by~using policy $p$)
+        \item Double approximation: $v_\theta(s) \approx v^{p_\rho}(s) \approx v^*(s)$.
         \item task of~\textbf{regression}
         \item stochastic gradient descent:
           \[
