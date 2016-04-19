@@ -695,24 +695,6 @@
       \]
     \end{frame}
 
-    \begin{frame}{Tree Evaluation from Value Network}
-      \begin{center}
-        \includegraphics[height=.82\textheight]{../img/tree_eval_from_value_network.png}
-
-        \tiny
-        action values~$Q(s, a)$ for~each tree-edge~$(s, a)$ from root position~$s$ (averaged over value network evaluations only)
-      \end{center}
-    \end{frame}
-
-    \begin{frame}{Tree Evaluation from Rollouts}
-      \begin{center}
-        \includegraphics[height=.82\textheight]{../img/tree_eval_from_rollouts.png}
-
-        \tiny
-        action values $Q(s, a)$, averaged over rollout evaluations only
-      \end{center}
-    \end{frame}
-
     \begin{frame}{MCTS: Backup}
       \begin{center}
         \includegraphics[height=.6\textheight]{../img/MCTS_backup.png}
@@ -1038,7 +1020,7 @@
   \appendix
 
   \begin{frame}[standout]
-    Backup slides
+    Backup Slides
   \end{frame}
 
   {
@@ -1063,6 +1045,24 @@
 
         \tiny
         evaluation of~all successors $s'$ of~the root position~$s$, using~$v_\theta(s′)$
+      \end{center}
+    \end{frame}
+
+    \begin{frame}{Tree Evaluation from Value Network}
+      \begin{center}
+        \includegraphics[height=.82\textheight]{../img/tree_eval_from_value_network.png}
+
+        \tiny
+        action values~$Q(s, a)$ for~each tree-edge~$(s, a)$ from root position~$s$ (averaged over value network evaluations only)
+      \end{center}
+    \end{frame}
+
+    \begin{frame}{Tree Evaluation from Rollouts}
+      \begin{center}
+        \includegraphics[height=.82\textheight]{../img/tree_eval_from_rollouts.png}
+
+        \tiny
+        action values $Q(s, a)$, averaged over rollout evaluations only
       \end{center}
     \end{frame}
 
