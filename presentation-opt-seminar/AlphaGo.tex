@@ -4,6 +4,7 @@
 \usepackage{epigraph}
 \usepackage{color}
 \usepackage{amsopn}
+\usepackage{tabto}
 
 %%% Bibliography
 \usepackage[backend=bibtex, style=authoryear]{biblatex}
@@ -23,6 +24,7 @@
 \setbeamertemplate{itemize subsubitem}{\itemBullet}
 \newcommand{\E}{\mathop{\mathbb{E}}}
 \DeclareMathOperator*{\argmax}{arg\,max}
+\newcommand{\epiParSpace}{\vskip 1.5ex}
 
 \title{AlphaGo: Mastering the game of~Go}
 \subtitle{with deep neural networks and tree search}
@@ -54,7 +56,7 @@
 
   {
     \setbeamertemplate{frame footer}{[1] \cite{GatysEB15a} [2] \cite{LiW16}}
-    \begin{frame}{Artistic-style Painting (1/2)}
+    \begin{frame}{Artistic-Style Painting (1/2)}
       \begin{center}
         \includegraphics[height=.4\textheight]{../img/art_Van_Gogh.jpg}
         \pause
@@ -66,7 +68,7 @@
 
   {
     \setbeamertemplate{frame footer}{\cite{Champandard2016semantic}}
-    \begin{frame}{Artistic-style Painting (2/2)}
+    \begin{frame}{Artistic-Style Painting (2/2)}
       \begin{center}
         \includegraphics[height=.86\textheight,keepaspectratio]{../img/doodle_AI.png}
       \end{center}
@@ -75,17 +77,57 @@
 
   {
     \setbeamertemplate{frame footer}{\cite{Karpathy15}}
-    \begin{frame}{C code Generated Character by Character}
+    \begin{frame}{\alert{C Code} Generated Character by Character}
       \begin{center}
         \vskip -1.1ex
         \includegraphics[height=.89\textheight, keepaspectratio]{../img/generating_c.png}
       \end{center}
     \end{frame}
 
-    \begin{frame}{Algebraic Geometry Generated Character by Character}
+    \begin{frame}{\alert{Algebraic Geometry} Generated Character by Character}
       \begin{center}
         \includegraphics[width=\textwidth, height=\textheight, keepaspectratio]{../img/generating_latex.png}
       \end{center}
+    \end{frame}
+  }
+
+  {
+    \usebackgroundtemplate{%
+      \tikz[overlay,remember picture] \node[opacity=1.0, at=(current page.center)] {
+         \includegraphics[height=\paperheight, keepaspectratio]{../img/Game_of_Thrones.jpg}
+       };
+    }
+    \setbeamertemplate{frame footer}{\url{http://pjreddie.com/darknet/rnns-in-darknet/}}
+    \begin{frame}[standout]
+      \vskip -1em
+      \tabto{-0.6cm}
+      \mbox{\alert{Game of Thrones} Generated Character by Character}
+      \pause
+
+      \epigraph{
+        \tiny
+        JON
+        \epiParSpace
+        He leaned close and onions, barefoot from his shoulder.
+        ``I am not a purple girl,'' he said as he stood over him.
+        ``The sight of you sell your father with you a little choice.''
+        \epiParSpace
+        ``I say to swear up his sea or a boy of stone and heart, down,'' Lord Tywin said.
+        ``I love your word or her to me.''
+      }{Darknet (on Linux)}
+      \pause
+      \vskip -1.5em
+      \epigraph{
+        \tiny
+        JON
+        \epiParSpace
+        Each in days and the woods followed his king.
+        ``I understand.''
+        \epiParSpace
+        ``I am not your sister Lord Robert?''
+        \epiParSpace
+        ``The door was always some cellar to do his being girls and the Magnar of Baratheon, and there were thousands of every bite of half the same as though he was not a great knight should be seen, and not to look at the Redwyne two thousand men.''
+      }{Darknet (on OS X)}
     \end{frame}
   }
 
