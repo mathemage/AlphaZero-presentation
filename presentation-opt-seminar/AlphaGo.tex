@@ -364,7 +364,7 @@
   {
     \setbeamercolor{background canvas}{bg=gray!10}
     \setbeamertemplate{frame footer}{\url{http://stevenmiller888.github.io/mind-how-to-build-a-neural-network/}}
-    \begin{frame}{Neural Networks: an~example of~feedforward}
+    \begin{frame}{Neural Networks: an~Example of~Feedforward}
       \begin{center}
         \includegraphics[width=\textwidth]{../img/feed_forward_example.png}
       \end{center}
@@ -490,7 +490,7 @@
       \end{center}
       \pause
       
-      or alternatively, \textbf{ELO ratings}
+      or alternatively, \textbf{Elo ratings}
     \end{frame}
   }
 
@@ -631,14 +631,14 @@
       Beware of~overfitting!
       \pause
       \begin{itemize}[<+- | alert@+>]
-        \item Successive positions are strongly correlated.
+        \item Consecutive positions are strongly correlated.
         \item Value network memorized the game outcomes, rather than generalizing to new positions.
         \item Solution: generate 30 million (new) positions, each sampled from a~\textbf{seperate} game
         \item almost the accuracy of~Monte Carlo rollouts (using $p_\rho$), but $15000$ times less computation!
       \end{itemize}
     \end{frame}
 
-    \begin{frame}{Evaluation accuracy in~various stages of a~game}
+    \begin{frame}{Evaluation Accuracy in~Various Stages of a~Game}
       \includegraphics[width=\textwidth]{../img/policies_move_numbers_vs_MSE.png}
 
       \vskip -2.4ex
@@ -654,16 +654,14 @@
       \end{itemize}
     \end{frame}
 
-    \begin{frame}{Training the (Deep Convolutional) Neural Networks}
-      \begin{center}
-        \includegraphics[width=\textwidth]{../img/neural_nets_pipeline.png}
-      \end{center}
-    \end{frame}
-
-    \begin{frame}{ELO Ratings for~Various Combinations of~Networks}
+    \begin{frame}{Elo Ratings for~Various Combinations of~Networks}
       \begin{center}
         \includegraphics[height=.85\textheight]{../img/ELO_ratings_various_combinations_of_ANNs.png}
       \end{center}
+    \end{frame}
+
+    \begin{frame}[standout]
+      The Main Algorithm
     \end{frame}
 
     \begin{frame}{MCTS Algorithm}
@@ -673,7 +671,7 @@
         \item selection phase
         \item expansion phase
         \item evaluation phase
-        \item backup phase (at~end of~simulation)
+        \item backup phase (at~end of~all simulations)
       \end{enumerate}
       \pause
 
@@ -808,7 +806,7 @@
       \end{itemize}
     \end{frame}
 
-    \begin{frame}{ELO Ratings for~Various Combinations of~Threads}
+    \begin{frame}{Elo Ratings for~Various Combinations of~Threads}
       \begin{center}
         \vskip -1ex
         \includegraphics[height=.9\textheight]{../img/ELO_ratings_various_combinations_of_threads.png}
@@ -954,7 +952,7 @@
         \item professional 9 dan 
         \item the $1^{st}$ in (unofficial) world ranking list
         \item the youngest player to win 3 major international tournaments
-        \item head-to-head record versus Lee Sedol \textbf{8:2}
+        \item head-to-head record against Lee Sedol \textbf{8:2}
         \item biological neural network comparable to Fan Hui's, and thus by~transitivity, also comparable to~Lee Sedol's
       \end{itemize}
 
@@ -1027,7 +1025,7 @@
 
     \begin{frame}{Novel approach}
       \pause
-      During the match against Fan Hui, AlphaGo evaluated \textbf{thousands of~times fewer} positions than DeepBlue against Kasparov.
+      During the match against Fan Hui, AlphaGo evaluated \textbf{thousands of~times fewer} positions than Deep~Blue against Kasparov.
       \pause
 
       It compensated this by:
@@ -1037,7 +1035,7 @@
       \end{itemize}
       \pause
 
-      Deep Blue relied on a~handcrafted evaluation function.
+      Deep~Blue relied on a~handcrafted evaluation function.
       \pause
 
       AlphaGo was trained \textbf{directly and automatically} from gameplay.
