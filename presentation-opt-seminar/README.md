@@ -12,3 +12,7 @@ To compile the presentation with `make` (shorthand for `make AlphaGo.pdf`), you 
 
 * use XeLaTeX and
 * use BibTeX.
+
+### Compiled version
+
+The compiled version is available at [SlideShare](http://www.slideshare.net/KarelHa1/alphago-mastering-the-game-of-go-with-deep-neural-networks-and-tree-search).

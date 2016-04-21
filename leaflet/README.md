@@ -11,3 +11,7 @@ The leaflet was made using LaTeX.
 To compile the leaflet with `make`, you must
 
 * use pdfLaTeX.
+
+### Compiled version
+
+The compiled version is available at [SlideShare](http://www.slideshare.net/KarelHa1/leaflet-for-the-talk-on-alphago).
