@@ -246,22 +246,6 @@
       \end{itemize}
     \end{frame}
 
-    \begin{frame}{Evaluation Accuracy in~Various Stages of a~Game}
-      \includegraphics[width=\textwidth]{../img/policies_move_numbers_vs_MSE.png}
-
-      \vskip -2.4ex
-      {\tiny
-      \textbf{Move number} is the number of~moves that had been played in the given position.
-      }
-
-      \pause
-      Each position evaluated by:
-      \begin{itemize}[<+- | alert@+>]
-        \item forward pass of the value network~$v_\theta$
-        \item 100 rollouts, played out using the corresponding policy
-      \end{itemize}
-    \end{frame}
-
     \begin{frame}{Elo Ratings for~Various Combinations of~Networks}
       \begin{center}
         \includegraphics[height=.85\textheight]{../img/ELO_ratings_various_combinations_of_ANNs.png}
@@ -671,6 +655,21 @@
       \begin{center}
         \includegraphics[width=\textwidth]{../img/SL_policy_accuracy_vs_win_rate.png}
       \end{center}
+    \end{frame}
+
+    \begin{frame}{Evaluation Accuracy in~Various Stages of a~Game}
+      \includegraphics[width=\textwidth]{../img/policies_move_numbers_vs_MSE.png}
+
+      \vskip -2.4ex
+      {\tiny
+      \textbf{Move number} is the number of~moves that had been played in the given position.
+      }
+
+      Each position evaluated by:
+      \begin{itemize}
+        \item forward pass of the value network~$v_\theta$
+        \item 100 rollouts, played out using the corresponding policy
+      \end{itemize}
     \end{frame}
 
     \begin{frame}{Input features for rollout and tree policy}
