@@ -8,5 +8,6 @@ AlphaZero.pdf: AlphaZero.tex $(wildcard *.tex) ../bibliography.bib
 	xelatex $<
 
 clean:
-	rm -f *.log *.dvi *.aux *.toc *.lof *.lot *.out *.bbl *.blg *._aux *._log *.nav *.synctex.gz *.project.vim .tmp/* *-blx.bib *.run.xml *.snm
+	rm -f *.log *.dvi *.aux *.toc *.lof *.lot *.out *.bbl *.blg *._aux *._log *.nav *.synctex.gz *.project.vim *-blx.bib *.run.xml *.snm
+	rm -rf .tmp/*
 	rm -f AlphaZero.pdf
