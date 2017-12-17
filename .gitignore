@@ -31,7 +31,6 @@
 *.vrb
 *.xdy
 *.tdo
-.*
 *._aux
 *._log
 *.project.vim
