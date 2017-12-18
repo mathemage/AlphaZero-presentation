@@ -241,6 +241,24 @@ with a General Reinforcement Learning Algorithm }
   {
     \setbeamertemplate{frame footer}{[\cite{Silver2017AlphaGoZero}]}
 
+    \begin{frame}{AG0: Differences Compared to AlphaGo \{Fan, Lee, Master\}}
+      AlphaGo \{Fan, Lee, Master\} $\times$ \alert{AlphaGo Zero}:
+      \pause
+      \begin{itemize}[<+->]
+        \item supervised learning from human expert positions $\times$ \alert{from scratch by self-play reinforcement learning (``tabula rasa'')}
+        \item additional (auxialiary) input features $\times$ \alert{only the black and white stones from the board as input features}
+        \item separate policy and value networks $\times$ \alert{single neural network}
+        \item tree search using also Monte Carlo rollouts $\times$ \alert{simpler tree search using only the single neural network to both evaluate positions and sample moves}
+      \end{itemize}
+      \pause
+
+      AG0 achieves this via
+      \begin{itemize}[<+->]
+        \item a~new \alert{reinforcement learning} algorithm
+        \item with \alert{lookahead search inside the training loop}
+      \end{itemize}
+    \end{frame}
+
     \begin{frame}{AG0: Self-Play Reinforcement Learning}
       \pause
       \begin{center}
