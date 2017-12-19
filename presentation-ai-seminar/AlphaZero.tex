@@ -472,7 +472,7 @@ with a General Reinforcement Learning Algorithm }
   \section{Conclusion}
 
   {
-    \setbeamertemplate{frame footer}{\cite{Silver2016mastering}}
+    \setbeamertemplate{frame footer}{[\cite{Silver2017AlphaZero}]}
     \begin{frame}{Difficulties of~Go}
       \begin{itemize}[<+- | alert@+>]
         \item challenging decision-making
@@ -483,49 +483,49 @@ with a General Reinforcement Learning Algorithm }
       \end{itemize}
     \end{frame}
 
-    \begin{frame}{AlphaGo: summary}
+    \begin{frame}{AlphaZero: Summary}
       \begin{itemize}[<+- | alert@+>]
         \item Monte Carlo tree search
         \item effective move selection and position evaluation 
           \begin{itemize}[<+- | alert@+>]
             \item through deep convolutional neural networks
-            \item trained by novel combination of~supervised and reinforcement learning
+            \item trained by new self-play reinforcement learning algorithm
           \end{itemize}
         \item new search algorithm combining
           \begin{itemize}[<+- | alert@+>]
-            \item neural network evaluation
-            \item Monte Carlo rollouts
+            \item evaluation by a~single neural network
+            \item Monte Carlo tree search
           \end{itemize}
-        \item scalable implementation
+        \item more efficient when compared to previous AlphaGo versions
           \begin{itemize}[<+- | alert@+>]
-            \item multi-threaded simulations on CPUs
-            \item parallel GPU computations
-            \item distributed version over multiple machines
+            \item single machine
+            \item 4 TPUs
+            \item hours rather than months of~training time
           \end{itemize}
       \end{itemize}
     \end{frame}
 
     \begin{frame}{Novel approach}
       \pause
-      During the match against Fan Hui, AlphaGo evaluated \textbf{thousands of~times fewer} positions than Deep~Blue against Kasparov.
+      During the matches (against Stockfish and Elmo), AlphaZero evaluated \alert{thousands of~times fewer} positions than Deep~Blue against Kasparov.
       \pause
 
       It compensated this by:
-      \begin{itemize}[<+- | alert@+>]
-        \item selecting those positions \textbf{more intelligently} (policy network)
-        \item evaluating them \textbf{more precisely} (value network)
+      \begin{itemize}[<+->]
+        \item selecting those positions \alert{more intelligently} (the neural network)
+        \item evaluating them \alert{more precisely} (the same neural network)
       \end{itemize}
       \pause
 
       Deep~Blue relied on a~handcrafted evaluation function.
       \pause
 
-      AlphaGo was trained \textbf{directly and automatically} from gameplay.
-      It used \textbf{general-purpose} learning.
+      AlphaZero was trained \alert{tabula rasa} from self-play.
+      It used \alert{general-purpose} learning.
       \pause
 
-      This approach is not specific to the game of Go.
-      The algorithm can be used \textbf{for much wider class} of~(so far seemingly) intractable problems in~AI!
+      This approach is not specific to the game of~Go.
+      The algorithm can be used \alert{for much wider class} of~AI problems!
     \end{frame}
   }
 
