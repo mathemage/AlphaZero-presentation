@@ -25,6 +25,7 @@
 \newcommand{\E}{\mathop{\mathbb{E}}}
 \DeclareMathOperator*{\argmax}{arg\,max}
 \newcommand{\epiParSpace}{\vskip 1.5ex}
+\newcommand{\p}{\mathbf{p}}
 
 \title{AlphaZero}
 \subtitle{Mastering Chess and Shogi \\
@@ -264,6 +265,26 @@ with a General Reinforcement Learning Algorithm }
       \begin{center}
         \includegraphics[height=.9\textheight]{../img/AG0-paper/self-play-RL-in-AG0.png}
       \end{center}
+    \end{frame}
+
+    \begin{frame}{AG0: Self-Play Reinforcement Learning -- Neural Network}
+      deep neural network $f_\theta$ with parameters~$\theta$:
+      \pause
+      \begin{itemize}[<+- | alert@+>]
+        \item input: raw board representation~$s$
+        \item output:
+          \begin{itemize}[<+- | alert@+>]
+            \item move probabilities $\p$
+            \item value $v$ of~the board position
+            \item $f_\theta(s) = (\p, v)$
+          \end{itemize}
+        \item specifics:
+          \begin{itemize}[<+- | alert@+>]
+            \item residual blocks (of convolutional layers)
+            \item batch normalization
+            \item rectifier non-linearities
+          \end{itemize}
+      \end{itemize}
     \end{frame}
 
     \begin{frame}{AG0: Elo Rating over Training Time (RL vs. SL)}
