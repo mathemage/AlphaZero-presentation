@@ -287,6 +287,25 @@ with a General Reinforcement Learning Algorithm }
       \end{itemize}
     \end{frame}
 
+    \begin{frame}{AG0: Self-Play Reinforcement Learning -- Steps}
+      \begin{enumerate}[<+- | alert@+>]
+        \item[0.] random weights $\theta_0$
+        \item at each iteration $i > 0$, self-play games are generated:
+          \begin{enumerate}[<+- | alert@+>]
+            \item[i.] MCTS samples search probabilities $\mathbf{\pi}_t$ based on the neural network from the previous iteration $f_{\theta_{i-1}}$:
+              $$\mathbf{\pi}_t = \alpha_{\theta_{i-1}}(s_t)$$
+              for each time-step $t = 1, 2, \ldots, T$
+            \item[ii.] move is sampled from $\mathbf{\pi}_t$
+            \item[iii.] data $(s_t, \mathbf{\pi}_t, z_t)$ for each $t$ are stored for later training
+            \item[iv.] new neural network $f_{\theta_{i}}$ is trained in order to minimize the loss
+              $$l = (z - v)^2 - \mathbf{\pi}^\top \log \p + c || \theta ||^2$$
+          \end{enumerate}
+      \end{enumerate}
+      \pause
+      \vskip -2em
+      Loss~$l$ makes $(\p, v) = f_\theta(s)$ more closely match the improved search probabilities and self-play winner $(\mathbf{\pi}, z)$.
+    \end{frame}
+
     \begin{frame}{AG0: Elo Rating over Training Time (RL vs. SL)}
       \begin{center}
         \includegraphics[height=.9\textheight]{../img/AG0-paper/training-time-vs-elo.png}
